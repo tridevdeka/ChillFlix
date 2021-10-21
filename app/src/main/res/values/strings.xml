@@ -1,0 +1,38 @@
+<resources>
+    <string name="app_name">ChillFlix</string>
+    <string name="home">Home</string>
+    <string name="favorite">Favorite</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="currently_showing">Currently Showing</string>
+    <string name="upcoming_movies">Upcoming movies</string>
+    <string name="popular_movies">Popular movies</string>
+    <string name="top_rated_movies">Top rated Movies</string>
+    <string name="fast9">Fast9</string>
+    <string name="fast_and_furious_9">Fast and Furious 9</string>
+    <string name="_1_5k">1.5K</string>
+    <string name="the_tomorrow_war">The Tomorrow War</string>
+    <string name="u2022">•</string>
+    <string name="read_more">Read more</string>
+    <string name="read_less">Read less</string>
+    <string name="overview">Overview</string>
+    <string name="cast_and_crew">Cast and Crew</string>
+    <string name="biography">Biography</string>
+    <string name="birthplace">Birthplace</string>
+    <string name="date_of_birth">Date of Birth</string>
+    <string name="known_for">known for</string>
+    <string name="Known_for">Known for</string>
+    <string name="no_items_in_your_watchlist">No items in your Watchlist !</string>
+    <string name="your_watchlist">Your Watchlist</string>
+    <string name="popular">Popular</string>
+    <string name="no_internet_connection">No Internet Connection</string>
+    <string name="please_check_your_connection">Please check your connection</string>
+    <string name="oops">OOPS!</string>
+    <string name="retry">RETRY</string>
+    <string name="watchlist">Watchlist</string>
+    <string name="playing_in_theatres">Playing In Theatres</string>
+    <string name="no_results_found">No results found!</string>
+    <string name="search">Search</string>
+    <string name="search_for_movies_celebrities">Search for Movies,Celebrities</string>
+    <string name="swipe_down_to_refresh">Swipe down to refresh</string>
+</resources>

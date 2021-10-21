@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorPrimaryLight"
+        tools:context=".fragments.Home">
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:id="@+id/refreshLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="UseCompoundDrawables">
+
+            <ImageView
+                android:layout_width="@dimen/_35sdp"
+                android:layout_height="@dimen/_35sdp"
+                android:layout_marginStart="@dimen/_25sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/ic_down_arrow" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_10sdp"
+                android:fontFamily="@font/ubuntu_regular"
+                android:text="@string/swipe_down_to_refresh"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_20ssp" />
+
+        </LinearLayout>
+
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/swipe"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent">
+
+
+            <androidx.core.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/txt_currentlyShowing"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/_10sdp"
+                        android:fontFamily="@font/ubuntu_medium"
+                        android:includeFontPadding="false"
+                        android:text="@string/playing_in_theatres"
+                        android:textColor="#fff"
+                        android:textSize="@dimen/_18ssp"
+                        android:visibility="gone"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                        android:id="@+id/img_viewAllCurrent"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_20sdp"
+                        android:layout_marginEnd="15dp"
+                        android:contentDescription="@string/app_name"
+                        android:src="@drawable/ic_arrow_view_all"
+                        android:visibility="gone"
+                        app:layout_constraintBottom_toBottomOf="@+id/txt_currentlyShowing"
+                        app:layout_constraintEnd_toEndOf="parent" />
+
+
+                    <androidx.viewpager2.widget.ViewPager2
+                        android:id="@+id/currentlyShowingViewPager"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_150sdp"
+                        android:layout_marginLeft="@dimen/_15sdp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="@dimen/_15sdp"
+                        android:visibility="gone"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/txt_currentlyShowing" />
+
+                    <TextView
+                        android:id="@+id/txt_upcomingShowing"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/_10sdp"
+                        android:layout_marginTop="12dp"
+                        android:fontFamily="@font/ubuntu_medium"
+                        android:text="@string/upcoming_movies"
+                        android:textColor="#fff"
+                        android:textSize="@dimen/_18ssp"
+                        android:visibility="gone"
+                        app:layout_constraintBottom_toTopOf="@+id/upcomingRecyclerView"
+                        app:layout_constraintEnd_toStartOf="@+id/img_viewAllCurrent"
+                        app:layout_constraintHorizontal_bias="0.027"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/currentlyShowingViewPager" />
+
+                    <ImageView
+                        android:id="@+id/img_viewAllUpcoming"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/currentlyShowingViewPager"
+                        android:layout_marginTop="@dimen/_15sdp"
+                        android:layout_marginEnd="@dimen/_15sdp"
+                        android:contentDescription="@string/app_name"
+                        android:src="@drawable/ic_arrow_view_all"
+                        android:visibility="gone"
+                        app:layout_constraintBottom_toBottomOf="@+id/txt_upcomingShowing"
+                        app:layout_constraintEnd_toEndOf="parent" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/upcomingRecyclerView"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_230sdp"
+                        android:layout_margin="@dimen/_5sdp"
+                        android:orientation="horizontal"
+                        android:visibility="gone"
+                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/txt_upcomingShowing" />
+
+                    <TextView
+                        android:id="@+id/txt_popular"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/_10sdp"
+                        android:fontFamily="@font/ubuntu_medium"
+                        android:text="@string/popular_movies"
+                        android:textColor="#fff"
+                        android:textSize="@dimen/_18ssp"
+                        android:visibility="gone"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/upcomingRecyclerView" />
+
+                    <ImageView
+                        android:id="@+id/img_viewAllPopular"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_15sdp"
+                        android:layout_marginEnd="@dimen/_15sdp"
+                        android:contentDescription="@string/app_name"
+                        android:src="@drawable/ic_arrow_view_all"
+                        android:visibility="gone"
+                        app:layout_constraintBottom_toBottomOf="@+id/txt_popular"
+                        app:layout_constraintEnd_toEndOf="parent" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/popularRecyclerView"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_230sdp"
+                        android:layout_margin="@dimen/_5sdp"
+                        android:orientation="horizontal"
+                        android:visibility="gone"
+                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/txt_popular" />
+
+                    <TextView
+                        android:id="@+id/txt_topRated"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:fontFamily="@font/ubuntu_medium"
+                        android:text="@string/top_rated_movies"
+                        android:textColor="#fff"
+                        android:textSize="@dimen/_18ssp"
+                        android:visibility="gone"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/popularRecyclerView" />
+
+                    <ImageView
+                        android:id="@+id/img_viewAllTopRated"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/popularRecyclerView"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginEnd="15dp"
+                        android:contentDescription="@string/app_name"
+                        android:src="@drawable/ic_arrow_view_all"
+                        android:visibility="gone"
+                        app:layout_constraintBottom_toBottomOf="@+id/txt_topRated"
+                        app:layout_constraintEnd_toEndOf="parent" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/topRatedRecyclerView"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_230sdp"
+                        android:layout_margin="5dp"
+                        android:orientation="horizontal"
+                        android:visibility="gone"
+                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/txt_topRated" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.core.widget.NestedScrollView>
+
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</layout>
