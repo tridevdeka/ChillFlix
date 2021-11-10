@@ -5,9 +5,10 @@
     android:id="@+id/nav_graph"
     app:startDestination="@id/home2">
 
+
     <fragment
         android:id="@+id/home2"
-        android:name="com.tridev.chillflix.fragments.Home"
+        android:name="com.tridev.uflixon.fragments.Home"
         android:label="layout_home"
         tools:layout="@layout/layout_home" >
         <action
@@ -23,7 +24,7 @@
     </fragment>
     <fragment
         android:id="@+id/movies"
-        android:name="com.tridev.chillflix.fragments.Movies"
+        android:name="com.tridev.uflixon.fragments.Movies"
         android:label="layout_movies"
         tools:layout="@layout/layout_movies" >
         <action
@@ -38,7 +39,7 @@
     </fragment>
     <fragment
         android:id="@+id/movieDetails"
-        android:name="com.tridev.chillflix.fragments.MovieDetails"
+        android:name="com.tridev.uflixon.fragments.MovieDetails"
         android:label="MovieDetails">
         <action
             android:id="@+id/action_movieDetails_to_actorDetails"
@@ -51,7 +52,7 @@
     </fragment>
     <fragment
         android:id="@+id/actorDetails"
-        android:name="com.tridev.chillflix.fragments.ActorDetails"
+        android:name="com.tridev.uflixon.fragments.ActorDetails"
         android:label="layout_actor_details"
         tools:layout="@layout/layout_actor_details" >
         <action
@@ -65,7 +66,7 @@
     </fragment>
     <fragment
         android:id="@+id/searchMovies"
-        android:name="com.tridev.chillflix.fragments.SearchMovies"
+        android:name="com.tridev.uflixon.fragments.SearchMovies"
         android:label="layout_search_movies"
         tools:layout="@layout/layout_search_movies" >
         <action
@@ -76,7 +77,7 @@
     </fragment>
     <fragment
         android:id="@+id/favorite"
-        android:name="com.tridev.chillflix.fragments.Favorites"
+        android:name="com.tridev.uflixon.fragments.Favorites"
         android:label="layout_favorite"
         tools:layout="@layout/layout_favorite" >
         <action
