@@ -83,8 +83,8 @@ API_KEY="Your API Key here"
 *   [OkHttp](https://github.com/square/okhttp) - for implementing interceptor, logging and mocking web server.
 *   [LiveData](https://developer.android.com/topic/libraries/architecture/livedata)
 *   [ViewModel](https://developer.android.com/topic/libraries/architecture/viewmodel)
-*   [DataBinding](https://developer.android.com/topic/libraries/data-binding/)
-*   [CircleImageView](https://github.com/hdodenhof/CircleImageView)
+*   [Room](https://developer.android.com/training/data-storage/room)
+
 
 
 ## Authors
