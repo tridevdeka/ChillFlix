@@ -22,7 +22,6 @@
 *   ConstraintLayout(guidelines, barriers... etc)
 *   Material design.
 
-![final-architecture]()
 
 ### App Architecture 
 Based on mvvm architecture and repository pattern.
@@ -43,7 +42,7 @@ Based on mvvm architecture and repository pattern.
 * <b>repository</b> - contains the repository classes, responsible for triggering api requests and saving the response in the database.
 * <b>di</b> - contains dependency injection classes, using Hilt-Dagger.   
 * <b>ui</b> - contains classes needed to display Activity and Fragment.
-* <b>util</b> - contains classes needed for activity/fragment redirection.
+* <b>utils</b> - contains classes needed for activity/fragment redirection.
 
 ## 🚀 Getting Started
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
