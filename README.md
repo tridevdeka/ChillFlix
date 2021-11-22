@@ -22,10 +22,12 @@
 *   ConstraintLayout(guidelines, barriers... etc)
 *   Material design.
 
+![final-architecture]()
+
 ### App Architecture 
 Based on mvvm architecture and repository pattern.
 
-<img src="screenshots/mvvm.png" width="500" style="max-width:500%;">
+<img src="https://user-images.githubusercontent.com/49573131/142830682-c1c4bea6-72d9-492c-bfe5-9a2ef5c94dc3.png" width="500" style="max-width:500%;">
 
 #### The app includes the following main components:
 
