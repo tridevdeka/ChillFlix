@@ -89,7 +89,7 @@ API_KEY="Your API Key here"
 
 ## Authors
 
-* **Tridev Deka** - *LinkedIn* - [Tridev Deka](https://www.linkedin.com/in/tridev-deka-5a6691226/)
+* **Tridev Deka** - *LinkedIn* - [Tridev Deka](https://www.linkedin.com/in/tridev-deka/)
 
 ```
 MIT License
