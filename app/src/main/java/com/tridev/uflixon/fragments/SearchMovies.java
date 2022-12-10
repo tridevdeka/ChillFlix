@@ -9,6 +9,7 @@ import androidx.fragment.app.Fragment;
 
 import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 import androidx.recyclerview.widget.StaggeredGridLayoutManager;
 
 
@@ -42,6 +43,7 @@ public class SearchMovies extends Fragment {
     ArrayList<Movie> moviesList = new ArrayList<>();
     String query = "";
     int currentPage = 1;
+    int totalPage = 459;
 
 
     @Override
@@ -107,6 +109,19 @@ public class SearchMovies extends Fragment {
         binding.MoviesRecyclerView.setLayoutManager(new StaggeredGridLayoutManager(2, LinearLayoutManager.VERTICAL));
         adapter = new SearchAdapter(getContext(), moviesList);
         binding.MoviesRecyclerView.setAdapter(adapter);
+
+        binding.MoviesRecyclerView.addOnScrollListener(new RecyclerView.OnScrollListener() {
+            @Override
+            public void onScrolled(@NonNull RecyclerView recyclerView, int dx, int dy) {
+                super.onScrolled(recyclerView, dx, dy);
+                if (!binding.MoviesRecyclerView.canScrollVertically(1)) {//when not able to scroll on next page;
+                    if (currentPage < totalPage) {
+                        currentPage += 1;
+                    }
+                    viewModel.GetSearchMovies(map, currentPage);
+                }
+            }
+        });
     }
 
     private void observeData() {
@@ -114,7 +129,8 @@ public class SearchMovies extends Fragment {
             if (movies.size()==0){
                 Toast.makeText(getContext(), "No results found!", Toast.LENGTH_SHORT).show();
             }else {
-                adapter.setMoviesList(movies);
+                moviesList.addAll(movies);
+                adapter.setMoviesList(moviesList);
                 binding.notFound.setVisibility(View.GONE);
             }
 
