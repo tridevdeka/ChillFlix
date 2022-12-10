@@ -1,12 +1,22 @@
 package com.tridev.uflixon.response;
 
+import com.google.gson.annotations.SerializedName;
 import com.tridev.uflixon.models.Movie;
 
 import java.util.ArrayList;
 
 public class MovieResponse {
 
-    private int page,total_pages,total_results;
+    @SerializedName("page")
+    private int page;
+
+    @SerializedName("total_pages")
+    private int total_pages;
+
+    @SerializedName("total_results")
+   private int total_results;
+
+    @SerializedName("results")
     private ArrayList<Movie> results;
 
 

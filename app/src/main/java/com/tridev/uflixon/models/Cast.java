@@ -1,8 +1,20 @@
 package com.tridev.uflixon.models;
 
 
+import com.google.gson.annotations.SerializedName;
+
 public class Cast {
-    private String character,name,profile_path;
+
+    @SerializedName("character")
+    private String character;
+
+    @SerializedName("name")
+    private String name;
+
+    @SerializedName("profile_path")
+    private String profile_path;
+
+    @SerializedName("id")
     private Integer id;
 
     public Cast(String character, String name, String profile_path, Integer id) {

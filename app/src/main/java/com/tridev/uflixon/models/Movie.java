@@ -1,16 +1,52 @@
 package com.tridev.uflixon.models;
 
 import com.google.gson.JsonObject;
+import com.google.gson.annotations.SerializedName;
 
 import java.util.ArrayList;
 
 public class Movie {
-    private String poster_path,overview,release_date,title,backdrop_path;
-    private Integer id,vote_count,runtime;
-    private Number popularity,vote_average;
+
+    @SerializedName("poster_path")
+    private String poster_path;
+
+    @SerializedName("overview")
+    private String overview;
+
+    @SerializedName("release_date")
+    private String release_date;
+
+    @SerializedName("title")
+    private String title;
+
+    @SerializedName("backdrop_path")
+    private String backdrop_path;
+
+    @SerializedName("id")
+    private Integer id;
+
+    @SerializedName("vote_count")
+    private Integer vote_count;
+
+    @SerializedName("runtime")
+    private Integer runtime;
+
+    @SerializedName("popularity")
+    private Number popularity;
+
+    @SerializedName("vote_average")
+    private Number vote_average;
+
+    @SerializedName("genre_ids")
     private ArrayList<Integer> genre_ids;
+
+    @SerializedName("genre_names")
     private ArrayList<String> genre_names;
+
+    @SerializedName("genres")
     private ArrayList<Genre> genres;
+
+    @SerializedName("videos")
     private JsonObject videos ;
 
 

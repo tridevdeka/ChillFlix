@@ -1,8 +1,13 @@
 package com.tridev.uflixon.models;
 
+import com.google.gson.annotations.SerializedName;
+
 public class Genre {
 
+    @SerializedName("id")
     private Integer id;
+
+    @SerializedName("name")
     private String name;
 
     public Genre(Integer id, String name) {

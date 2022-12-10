@@ -170,6 +170,7 @@ public class MovieDetails extends Fragment {
                 binding.txtReleaseDate.setText(String.format("Released On: %s", movie.getRelease_date()));
 
                 binding.textReadMore.setOnClickListener(v -> {
+
                     if (binding.textReadMore.getText().toString().equals("Read more")) {
                         binding.txtDescription.setMaxLines(Integer.MAX_VALUE);
                         binding.txtDescription.setEllipsize(null);

@@ -258,7 +258,7 @@ public class HomeViewModel extends ViewModel {
     //Room Database;
 
     public void insertMovie(FavoriteMovieEntities favoriteMovieEntities) {
-        Log.e(TAG, "insertMovie: "+favoriteMovieEntities);
+        Log.e(TAG, "insertMovie: " + favoriteMovieEntities);
         movieRepository.insertMovie(favoriteMovieEntities);
     }
 

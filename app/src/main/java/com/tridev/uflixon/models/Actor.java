@@ -1,11 +1,35 @@
 package com.tridev.uflixon.models;
 
 import com.google.gson.JsonObject;
+import com.google.gson.annotations.SerializedName;
 
 public class Actor {
-    private String birthday,name,biography,place_of_birth,profile_path,known_for_department;
+
+    @SerializedName("birthday")
+    private String birthday;
+
+    @SerializedName("name")
+    private String name;
+
+    @SerializedName("biography")
+    private String biography;
+
+    @SerializedName("place_of_birth")
+    private String place_of_birth;
+
+    @SerializedName("profile_path")
+    private String profile_path;
+
+    @SerializedName("known_for_department")
+    private String known_for_department;
+
+    @SerializedName("popularity")
     private Number popularity;
+
+    @SerializedName("id")
     private Integer id;
+
+    @SerializedName("movie_credits")
     private JsonObject movie_credits;
 
     public JsonObject getMovie_credits() {
