@@ -1,4 +1,4 @@
-<h1 align="center">UFlixOn</h1>
+<h1 align="center">FlixOn</h1>
 <h4 align="center">
 	A Movies guide app with various details and trailers.Discover the most popular and top rated movies playing. Movies data fetched using <a href="https://www.themoviedb.org/">themoviedb.org</a> API.
 </h4>
